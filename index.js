@@ -1,13 +1,15 @@
 import db from 'mongoose';
 import express from 'express';
 import rutas from './rutasMatematicas.js';
-import RutasTexto from './texto.js';
+import RutasTexto from './rutasTexto.js';
+import rutasPokeapi from './rutasPokeapi.js';
 
 const app = express();
 app.use(express.json())
 
 app.use('/rutasMatematicas', rutas);
 app.use('/rutasTexto', RutasTexto);
+app.use('/rutasPokeapi', rutasPokeapi);
 const port = 3000;
 
 app.get('/', (req, res)=> {
