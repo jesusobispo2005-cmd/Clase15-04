@@ -10,11 +10,17 @@ app.get('/', (req, res)=> {
 });
 
 
-app.post('/holi',(req, res)=>{
-    console.log(req.body)
-    const {nombre}=req.body
-    res.send(`hola ${nombre}`)
-})
+app.post('/holi', (req, res) => {
+    const { nombre, apellido } = req.body;
+
+    if (nombre !="") {
+        res.send(`hola ${nombre}`);
+    } else if (apellido != "") {
+        res.send(`hola ${apellido}`);
+    } else {
+        res.send("Faltan nombre o apellido");
+    }
+});
 
 app.listen(port, ()=>{
     console.log(`el servidor aranco en la url http://localhost:${port}`)
