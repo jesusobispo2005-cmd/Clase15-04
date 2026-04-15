@@ -1,12 +1,13 @@
 import db from 'mongoose';
 import express from 'express';
 import rutas from './rutasMatematicas.js';
-import { palindromo } from './texto.js';
+import RutasTexto from './texto.js';
 
 const app = express();
 app.use(express.json())
 
 app.use('/rutasMatematicas', rutas);
+app.use('/rutasTexto', RutasTexto);
 const port = 3000;
 
 app.get('/', (req, res)=> {
@@ -26,13 +27,6 @@ app.post('/holi', (req, res) => {
     }
 });
 
-app.post('/palindromo', (req, res) => {
-        const { palabra } = req.body;
-
-        const resultado = palindromo(palabra);
-    //palindromo();
-    res.status(200).json({palindromo: resultado});
-});
 
 
 app.listen(port, ()=>{
