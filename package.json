@@ -1,0 +1,26 @@
+{
+  "name": "clase_15_04",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000C\u0000l\u0000a\u0000s\u0000e\u00001\u00005\u0000-\u00000\u00004\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusobispo2005-cmd/Clase15-04.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/jesusobispo2005-cmd/Clase15-04/issues"
+  },
+  "homepage": "https://github.com/jesusobispo2005-cmd/Clase15-04#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.4.1"
+  }
+}
